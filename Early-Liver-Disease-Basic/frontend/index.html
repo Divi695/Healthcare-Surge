@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Early Liver Disease Prediction</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Early Liver Disease Prediction</h1>
+    <p>Deep Learning Based Health Risk Demo</p>
+  </header>
+
+  <main class="container">
+    <section class="card intro">
+      <h2>Enter Patient Details</h2>
+      <p>This is a hackathon demonstration project. It is not a medical diagnosis.</p>
+    </section>
+
+    <form id="predictionForm" class="card form-grid">
+      <div class="field"><label>Age</label><input type="number" id="age" value="45" required></div>
+      <div class="field"><label>Gender</label><select id="gender"><option value="1">Male</option><option value="0">Female</option></select></div>
+      <div class="field"><label>Total Bilirubin</label><input type="number" step="0.1" id="total_bilirubin" value="1.2" required></div>
+      <div class="field"><label>Direct Bilirubin</label><input type="number" step="0.1" id="direct_bilirubin" value="0.4" required></div>
+      <div class="field"><label>Alkaline Phosphotase</label><input type="number" id="alkaline_phosphotase" value="220" required></div>
+      <div class="field"><label>Alamine Aminotransferase</label><input type="number" id="alamine_aminotransferase" value="35" required></div>
+      <div class="field"><label>Aspartate Aminotransferase</label><input type="number" id="aspartate_aminotransferase" value="40" required></div>
+      <div class="field"><label>Total Proteins</label><input type="number" step="0.1" id="total_proteins" value="6.8" required></div>
+      <div class="field"><label>Albumin</label><input type="number" step="0.1" id="albumin" value="3.5" required></div>
+      <div class="field"><label>Albumin & Globulin Ratio</label><input type="number" step="0.1" id="albumin_and_globulin_ratio" value="1.0" required></div>
+      <button type="submit">Predict Liver Disease Risk</button>
+    </form>
+
+    <section id="result" class="card result hidden">
+      <h2>Prediction Result</h2>
+      <p id="predictionText"></p>
+      <p id="probabilityText"></p>
+      <p class="warning">Software demonstration only. This result is not a medical diagnosis.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
